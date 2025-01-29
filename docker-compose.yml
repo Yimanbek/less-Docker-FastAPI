@@ -1,0 +1,18 @@
+version: '3.10'
+
+services:
+  db:
+    image: postgres:14
+    container_name: yimanbek_db
+    restart: always
+    environment:
+      POSTGRES_USER: yimanbek_
+      POSTGRES_PASSWORD: "1"
+      POSTGRES_DB: barber_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
