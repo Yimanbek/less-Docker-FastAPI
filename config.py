@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     DB_USER: str = os.getenv('DB_USER')
     DB_PASSWORD: str = os.getenv('DB_PASSWORD')
     DB_NAME: str = os.getenv('DB_NAME')
-    DB_HOST: str = "localhost" # если есть докер и запуск на сервере не на локал то 'db'
+    DB_HOST: str = "db" # если есть докер и запуск на сервере не на локал то 'db'
     DB_PORT: str = "5432"
 
     @property
